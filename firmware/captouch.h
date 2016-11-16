@@ -60,13 +60,14 @@ class CapTouch
         Event getEvent();
 		// Get state information
 //        State getState();
+        long touchSampling();
         
     protected:
 		// Currently this is static until we can pass a lambda to the
 		// attachInterrupt() call
 		void touchSense();
         
-        long touchSampling();
+        
         Event touchEventCheck();
         
         bool m_intrIsAttached;
